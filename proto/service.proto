@@ -1,7 +1,7 @@
 sytnax="proto3";
 package pb;
 
-option go_package="https://github.com/Aadhu23/go-grpc-docker/proto";
+option go_package="https://github.com/Aadhu23/go-grpc-docker/tree/master/proto";
 
 import "google/api/annotations.proto";
 
