@@ -1,21 +1,23 @@
-sytnax="proto3";
+syntax = "proto3";
+
 package pb;
 
-option go_package="https://github.com/Aadhu23/go-grpc-docker/tree/master/proto";
+option go_package = "github.com/Aadhu23/go-grpc-docker/proto";
 
 import "google/api/annotations.proto";
 
-serivce Greeter{
-  rpc SayHello (HelloRequest) returns (HelloResponse){
-    option (google.api.http)={
-        get: "/v1/hwllo/{name}"
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse) {
+    option (google.api.http) = {
+      get: "/v1/hello/{name}"
     };
   }
 }
 
-message HelloRequest{
-  string name=1;
+message HelloRequest {
+  string name = 1;
 }
-message HelloResponse{
-  stirng message=1;
+
+message HelloResponse {
+  string message = 1;
 }
